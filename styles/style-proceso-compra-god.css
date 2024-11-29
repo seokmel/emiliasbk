@@ -1,0 +1,350 @@
+/* Estilos generales para el carrito */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: whitesmoke;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+ 
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* Layout de Cart y Checkout */
+  .checkoutLayout {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Cart (2/3) y Checkout (1/3) */
+    gap: 20px;
+  }
+  
+  /* Estilo para Cart */
+  .returnCart {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .returnCart h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  .returnCart .list .item {
+    display: grid;
+    grid-template-columns: 80px 1fr 50px 80px;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fdfdfd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+  }
+  
+  .returnCart .list .item img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .returnCart .list .item .name {
+    font-weight: bold;
+    font-size: 1em;
+  }
+  
+  .returnCart .list .item .price {
+    font-size: 0.9em;
+    color: #ffffff;
+  }
+  
+  .returnCart .list .item .quantity {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .returnCart .list .item .returnPrice {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  /* Estilo para Checkout */
+  .right {
+    background-color: #fbedde;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .right h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  .right .form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas */
+    gap: 20px;
+    border-bottom: 1px solid #fbedde;
+    padding-bottom: 20px;
+  }
+  
+  .right .form .group:nth-child(-n+3) {
+    grid-column: span 2;
+  }
+  
+  .right .form input, 
+  .right .form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 20px;
+    border: none;
+    background-color: #fbedde;
+    color: #fff;
+  }
+  
+  .right .return .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .right .return .row div:nth-child(2) {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  
+  .buttonCheckout {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #d4b494;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .checkoutLayout {
+      grid-template-columns: 1fr; /* Una sola columna */
+    }
+  }
+  
+
+/* Contenedor principal del carrito */
+.cart-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Título del carrito */
+.cart-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.continue-shopping {
+    float: right;
+    font-size: 1em;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.continue-shopping:hover {
+    text-decoration: underline;
+}
+
+/* Encabezado del carrito */
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 1.1em;
+    border-bottom: 2px solid #ffffff;
+}
+
+/* Listado de productos en el carrito */
+.cart-items > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #ffffff;
+}
+
+.product-details {
+    display: flex;
+    align-items: center;
+    flex-basis: 50%;
+}
+
+.product-image {
+    width: 110px;
+    height: 90px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-info h2 {
+    margin: 0;
+    font-size: 1.3em;
+    color: #ffffff;
+}
+
+.product-info p { 
+    margin: 3px 0;
+    color: #ffffff;
+    font-size: 0.9em;
+}
+
+/* Botones para ajustar cantidad */
+.cantidad-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cantidad-btn {
+    background-color: #d4a373;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cantidad-btn:hover {
+    background-color: #bc6c25;
+}
+
+.cantidad {
+    width: 60px;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+    background: none;
+    color: inherit;
+    outline: none;
+    pointer-events: none;
+}
+
+/* Botón para eliminar producto */
+.delete-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #d32f2f;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.item-total {
+    flex-basis: 20%;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/* Resumen del carrito */
+.cart-summary {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.checkout-btn {
+    background-color: #ffffff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.checkout-btn:hover {
+    background-color: #d4a373;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(255, 255, 255);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor del resumen y formulario */
+#checkout-summary, .checkout-form-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Títulos y párrafos */
+h1, h2, p {
+    color: #ffffff;
+}
+
+/* Botón general */
+button {
+    background-color: #ffffff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #d4a373;
+}
+
+/* Campos del formulario bancario */
+#bank-details {
+    margin-top: 15px;
+}
+
+label, input[type="text"] {
+    display: block;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    width: calc(100% - 16px);
+    box-sizing: border-box;
+}
